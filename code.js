@@ -29,6 +29,8 @@ function updateGrid(){
   gridWidthSpan.textContent = gridWidthInput.value + ' px';
   createGrid();
   allotTileLogic();
+  updateGridLines();
+  
 }
 
 function createGrid (){
@@ -51,6 +53,22 @@ function allotTileLogic(){
     tile.style.backgroundColor = 'green');
   })
 }
+
+function updateGridLines(){
+  const tiles = document.querySelectorAll('.tile');
+  if (showGrid.checked) {
+    tiles.forEach(tile => tile.classList.add('tile-border'));
+  } else {
+    tiles.forEach(tile => tile.classList.remove('tile-border'));
+  }
+}
+
+const showGrid = document.querySelector('#show-grid');
+showGrid.addEventListener('change', () => {
+  updateGridLines();
+})
+
+
 
 // Page creation starts here
 setupInitialGrid();
