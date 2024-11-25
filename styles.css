@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  color: aliceblue;
+}
+
+body {
+  background-color: black;
+}
+
+h1 {
+  margin: 20px 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin-top: 20px;
+}
+
+li > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content {
+  display: flex;
+  gap: 50px;
+}
+
+.etch-container {
+  height: 50vw;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.tile-container {
+  flex: 1;
+  height: auto;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+}
+
+.tile {
+  flex: 1;
+  background-color: red;
+}
+
+.sidebar {
+  margin-top: -50px;
+}

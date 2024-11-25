@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-N-Sketch</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./code.js" defer></script>
+</head>
+<body>
+  <h1>Etch-N-Sketch <sub style="font-size: 12px;">by TC</sub></h1>
+  
+  <div class="content">
+    <div class="etch-container"></div>
+    <div class="sidebar">
+      <h2>Settings</h2>
+      <ul>
+        <li>
+          <label for="grid-height">Height
+            <input type="range" name="grid-height" id="grid-height" min="10" max="100" step="1">
+            <span class="grid-current-height"></span>
+          </label>
+        </li>
+        <li>
+          <label for="grid-width">Width
+            <input type="range" name="grid-width" id="grid-width" min="10" max="100" step="1">
+            <span class="grid-current-width"></span>
+          </label>
+        </li>
+      </ul>
+
+
+    </div>
+  </div>
+</body>
+</html>
