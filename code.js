@@ -2,6 +2,7 @@
 const INITIAL_GRID_HEIGHT = 10;
 const INITIAL_GRID_WIDTH = 10;
 const DEFAULT_TILE_COLOR = 'black';
+const DEFAULT_ETCH_COLOR = '#00AF00';
 
 const etchContainer = document.querySelector('.etch-container');
 
@@ -9,6 +10,10 @@ const gridHeightInput = document.querySelector('#grid-height');
 const gridWidthInput = document.querySelector('#grid-width');
 const gridHeightSpan = document.querySelector('.grid-current-height');
 const gridWidthSpan = document.querySelector('.grid-current-width');
+const etchColor = document.querySelector('#etch-color');
+etchColor.value = DEFAULT_ETCH_COLOR;
+
+console.dir(etchColor);
 
 
 gridHeightInput.addEventListener('change', () => {
@@ -51,7 +56,7 @@ function allotTileLogic(){
   const tiles = document.querySelectorAll('.tile');
   tiles.forEach( tile => {
     tile.addEventListener('mouseenter', () => 
-    tile.style.backgroundColor = 'green');
+    tile.style.backgroundColor = etchColor.value);
   })
 }
 
@@ -77,7 +82,7 @@ function setTileBackground(color){
 }
 
 const tileColorPicker = document.querySelector('#tile-color');
-tileColorPicker.addEventListener('change', event => {
+tileColorPicker.addEventListener('change', () => {
   setTileBackground(tileColorPicker.value);
 });
 
