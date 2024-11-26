@@ -54,7 +54,7 @@ li > label {
 
 .tile {
   flex: 1;
-  /* background-color: black; */
+  opacity: 1;
 }
 
 .tile-border {
@@ -66,6 +66,10 @@ li > label {
 }
 
 .hidden {
+  display: none;
+}
+
+.hidden-checkbox {
   opacity: 0;
   width: 0;
   height: 0;
@@ -122,4 +126,26 @@ input:checked + .slider:before {
 
 .color-selector, .color-selector input {
   cursor: pointer;
+}
+
+.active {
+  background-color: orange;
+}
+
+button {
+  width: 180px;
+  padding: 5px 10px;
+  background-color: #a0a0bf;
+  border: none;
+  border-radius: 5px;
+  box-shadow: -2px 3px 4px #614f4f9e;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button:active {
+  background-color: red;
+  transform: translateY(3px);
 }
