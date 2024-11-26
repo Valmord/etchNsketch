@@ -1,38 +1,30 @@
 
-const INITIAL_GRID_HEIGHT = 10;
-const INITIAL_GRID_WIDTH = 10;
+const INITIAL_GRID_SIZE = 10;
 const DEFAULT_TILE_COLOR = 'black';
 const DEFAULT_ETCH_COLOR = '#00AF00';
 
 const etchContainer = document.querySelector('.etch-container');
 
-const gridHeightInput = document.querySelector('#grid-height');
-const gridWidthInput = document.querySelector('#grid-width');
-const gridHeightSpan = document.querySelector('.grid-current-height');
-const gridWidthSpan = document.querySelector('.grid-current-width');
+const gridSizeInput = document.querySelector('#grid-size');
+const gridSizeSpan = document.querySelector('.grid-current-size');
 const etchColor = document.querySelector('#etch-color');
 etchColor.value = DEFAULT_ETCH_COLOR;
 
 console.dir(etchColor);
 
 
-gridHeightInput.addEventListener('change', () => {
-  updateGrid();
-});
-gridWidthInput.addEventListener('change', () => {
+gridSizeInput.addEventListener('change', () => {
   updateGrid();
 });
 
 function setupInitialGrid(){
-  gridHeightInput.value = INITIAL_GRID_HEIGHT;
-  gridWidthInput.value = INITIAL_GRID_WIDTH;
+  gridSizeInput.value = INITIAL_GRID_SIZE;
   updateGrid();
 }
 
 function updateGrid(){
   etchContainer.innerHTML = '';
-  gridHeightSpan.textContent = gridHeightInput.value + ' px';
-  gridWidthSpan.textContent = gridWidthInput.value + ' px';
+  gridSizeSpan.textContent = gridSizeInput.value + ' px';
   createGrid();
   allotTileLogic();
   updateGridLines();
@@ -40,10 +32,10 @@ function updateGrid(){
 }
 
 function createGrid (){
-  for (let row = 0; row < gridWidthInput.value; row++){
+  for (let row = 0; row < gridSizeInput.value; row++){
     const tileContainer = document.createElement('div');
     tileContainer.classList.add('tile-container');
-    for (let column = 0; column < gridHeightInput.value; column++) {
+    for (let column = 0; column < gridSizeInput.value; column++) {
       const tile = document.createElement('div');
       tile.classList.add('tile');
       tileContainer.appendChild(tile);

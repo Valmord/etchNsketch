@@ -16,15 +16,9 @@
       <h2>Settings</h2>
       <ul>
         <li>
-          <label for="grid-height">Height
-            <input type="range" name="grid-height" id="grid-height" min="10" max="100" step="1">
-            <span class="grid-current-height"></span>
-          </label>
-        </li>
-        <li>
-          <label for="grid-width">Width
-            <input type="range" name="grid-width" id="grid-width" min="10" max="100" step="1">
-            <span class="grid-current-width"></span>
+          <label for="grid-size" >Size
+            <input type="range" name="grid-size" id="grid-size" min="10" max="100" step="1">
+            <span class="grid-current-size"></span>
           </label>
         </li>
         <li>
@@ -36,13 +30,13 @@
             </div>
         </li>
         <li>
-          <label for="tile-color">
+          <label for="tile-color" class="color-selector">
             <input type="color" name="tile-color" id="tile-color">
             Tile Colour
           </label>
         </li>
       <li>
-        <label for="etch-color">
+        <label for="etch-color" class="color-selector">
           <input type="color" name="etch-color" id="etch-color">
           Etch Colour
         </label>

@@ -7,13 +7,13 @@
 }
 
 body {
-  background-color: skyblue;
+  background-color: black;
 }
 
 
 
 h1 {
-  margin: 20px 10px;
+  margin: 20px 200px;
 }
 
 ul {
@@ -33,20 +33,23 @@ li > label {
 .content {
   display: flex;
   gap: 50px;
+  padding-left: 50px;
 }
+
+
 
 .etch-container {
   height: min(50vw,80vh);
   width: min(50vw,80vh);
   display: flex;
   flex-direction: column;
+  border: 4px gray solid;
 }
 
 .tile-container {
   flex: 1;
   height: auto;
   display: flex;
-  margin-left: 30px;
 }
 
 .tile {
@@ -114,4 +117,9 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+
+.color-selector, .color-selector input {
+  cursor: pointer;
 }
